@@ -22,6 +22,12 @@ function round_up(x, y) {
     return Math.floor(x / y) * y;
 }
 
+function clear_fields(){
+    document.querySelector("input.premium-exchange-input[data-resource = 'wood']").value = 0;
+    document.querySelector("input.premium-exchange-input[data-resource = 'stone']").value = 0;
+    document.querySelector("input.premium-exchange-input[data-resource = 'iron']").value = 0;
+}
+
 var infobox = document.createElement("div");
 infobox.className = "info_box";
 var count = 0;
@@ -40,13 +46,8 @@ if (window.location.href.indexOf("screen=market&mode=exchange") === -1) {
         } else if (event.keyCode == 69) { // e
             document.querySelector("input.premium-exchange-input[data-resource = 'iron']").value = round_up(iron, iron_rate);
         } else if (event.keyCode == 82) { // r
-            document.querySelector("input.premium-exchange-input[data-resource = 'wood']").value = 0;
-            document.querySelector("input.premium-exchange-input[data-resource = 'stone']").value = 0;
-            document.querySelector("input.premium-exchange-input[data-resource = 'iron']").value = 0;
-			/*document.querySelector("input.premium-exchange-input[data-resource = 'wood']").placeholder = 0;
-			document.querySelector("input.premium-exchange-input[data-resource = 'stone']").placeholder = 0;
-			document.querySelector("input.premium-exchange-input[data-resource = 'iron']").placeholder = 0;*/
-
+            
+			clear_fields();
         }
     });
     setInterval(function () {
@@ -82,6 +83,8 @@ if (window.location.href.indexOf("screen=market&mode=exchange") === -1) {
                     } 
                 }else {
                     jQuery('.confirmation-box .btn-confirm-no').click();
+                    clear_fields();
+
                 }
                 next_attempt_count = count + 5;
             }
