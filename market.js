@@ -41,9 +41,9 @@ if (window.location.href.indexOf("screen=market&mode=exchange") === -1) {
 			document.querySelector("input.premium-exchange-input[data-resource = 'wood']").value = 0;
 			document.querySelector("input.premium-exchange-input[data-resource = 'stone']").value = 0;
 			document.querySelector("input.premium-exchange-input[data-resource = 'iron']").value = 0;
-			document.querySelector("input.premium-exchange-input[data-resource = 'wood']").placeholder = 0;
+			/*document.querySelector("input.premium-exchange-input[data-resource = 'wood']").placeholder = 0;
 			document.querySelector("input.premium-exchange-input[data-resource = 'stone']").placeholder = 0;
-			document.querySelector("input.premium-exchange-input[data-resource = 'iron']").placeholder = 0;
+			document.querySelector("input.premium-exchange-input[data-resource = 'iron']").placeholder = 0;*/
 			
 		}
 	});
