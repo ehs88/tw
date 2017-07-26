@@ -24,7 +24,6 @@ function round_up(x, y) {
 
 var infobox = document.createElement("div");
 infobox.className = "info_box";
-infobox.innerHTML = "(Version:"+script_version+") Monitoring market, minimize this window and enjoy but don't open new tab here.";
 var count = 0;
 var next_attempt_count = 0;
 
@@ -54,7 +53,7 @@ if (window.location.href.indexOf("screen=market&mode=exchange") === -1) {
         count++;
 
         if (count > next_attempt_count) {
-            infobox.innerHTML = "Monitoring market, minimize this window and enjoy but don't open new tab here. " + count;
+            infobox.innerHTML = "(Version:"+script_version+") Monitoring market, minimize this window and enjoy but don't open new tab here. " + count;
             var fader = jQuery('#fader');
             if (fader.length == 0 || fader.css('display') == 'none') {
 
