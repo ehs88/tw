@@ -27,7 +27,10 @@ function clear_fields(){
     document.querySelector("input.premium-exchange-input[data-resource = 'stone']").value = 0;
     document.querySelector("input.premium-exchange-input[data-resource = 'iron']").value = 0;
 }
-
+var interval=0;
+while(interval<1000){
+    interval = prompt("Please enter an interval in miliseconds: (should NOT be less than 1000):","1000");
+}
 var infobox = document.createElement("div");
 infobox.className = "info_box";
 var count = 0;
@@ -91,5 +94,5 @@ if (window.location.href.indexOf("screen=market&mode=exchange") === -1) {
         } else {
             infobox.innerHTML = "Waiting a few seconds before our next attempts. We don't want to get detected easily!" + count;
         }
-    }, 1000);
+    }, interval);
 }
