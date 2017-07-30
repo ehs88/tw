@@ -60,8 +60,8 @@ if (window.location.href.indexOf("screen=market&mode=exchange") === -1) {
             infobox.innerHTML = "(Version:" + script_version + ") Monitoring market, minimize this window and enjoy but don't open new tab here. " + count;
             var fader = jQuery('#fader');
             if (fader.length == 0 || fader.css('display') == 'none') {
-
-                PremiumExchange.loadData();
+		
+                //PremiumExchange.loadData(); //Uncomment this to refresh page
 
                 wood = document.querySelector('#premium_exchange_stock_wood').innerHTML;
                 clay = document.querySelector('#premium_exchange_stock_stone').innerHTML;
